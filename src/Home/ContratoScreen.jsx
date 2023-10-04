@@ -245,7 +245,7 @@ export const ContratoScreen = (props) => {
         <button
           onClick={() => {
             pdfMake.createPdf(docDefinitions).open();
-            pdfMake.createPdf(docDefinitions).download("search.pdf")
+            pdfMake.createPdf(docDefinitions).download("_blank")
           }}
         >
           PDF
