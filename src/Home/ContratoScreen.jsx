@@ -74,20 +74,27 @@ export const ContratoScreen = (props) => {
           { text: nome, bold: true },
           " situado(a) na ",
           {
-            text: rua,
+            text:
+              rua +
+              " , n° " +
+              numeroCasa +
+              " - " +
+              nomeBairro +
+              " - " +
+              cidade +
+              " / " +
+              estado +
+              " CEP " +
+              cep +
+              " inscrito no CPF  sob o nº " +
+              numeroCliente,
           },
-          { text: " , n° " },
-          {
-            numeroCasa,
-          },
-          { text: nomeBairro},
-          { text: cidade },
-          { text: "/" },
-          { text: estado },
-          { text: "– CEP " },
-          { text: cep, bold: true },
-          "inscrito no CPF  sob o nº ",
-          { text: "43.957.080/0001-80 ", bold: true },
+          // { text: nomeBairro},
+          // { text: cidade },
+          // { text: "/" },
+          // { text: estado },
+          // { text: "– CEP " },
+          // { text: cep, bold: true },
           "e celular n° ",
           { text: "(35) 3267-2027; ", bold: true },
         ],
@@ -245,7 +252,6 @@ export const ContratoScreen = (props) => {
         <button
           onClick={() => {
             pdfMake.createPdf(docDefinitions).open();
-            pdfMake.createPdf(docDefinitions).download("_blank")
           }}
         >
           PDF
