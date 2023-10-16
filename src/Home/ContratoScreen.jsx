@@ -15,6 +15,7 @@ export const ContratoScreen = (props) => {
   const estado = props.estadoCliente;
   const cep = props.cepCliente;
   const numeroCliente = props.numeroCliente;
+  const telefone = props.telefone;
 
   const nomeDoCliente = {
     nome,
@@ -87,16 +88,9 @@ export const ContratoScreen = (props) => {
               " CEP " +
               cep +
               " inscrito no CPF  sob o nº " +
-              numeroCliente,
+              numeroCliente + ", e celular n°: " + telefone
+
           },
-          // { text: nomeBairro},
-          // { text: cidade },
-          // { text: "/" },
-          // { text: estado },
-          // { text: "– CEP " },
-          // { text: cep, bold: true },
-          "e celular n° ",
-          { text: "(35) 3267-2027; ", bold: true },
         ],
         alignment: "center",
         style: tamanhoTexto,

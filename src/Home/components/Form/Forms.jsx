@@ -4,11 +4,14 @@ import {
   FormBaseAll,
   TituloForm,
 } from "../../Styled/StyledComponets";
-import { Botao } from "../Button/Button";
+import { BotaoBase, BotaoDiv } from "../../Styled/StyledComponets";
+import { useNavigate } from "react-router-dom";
+
 import { useState } from "react";
 
 export const Forms = (props) => {
-  
+
+  const navigate = useNavigate();
 
   return (
     <FormBase>
@@ -89,8 +92,25 @@ export const Forms = (props) => {
             placeholder="CPF/CNPJ"
             type="text"
           />
+          <label>Telefone</label>
+          <input
+            value={props.telefone}
+            onChange={(txt) => {
+              props.setTelefone([txt.target.value]);
+            }}
+            placeholder="CPF/CNPJ"
+            type="text"
+          />
         </form>
-        <Botao />
+        <BotaoBase>
+          <BotaoDiv
+            onClick={() => {
+              navigate("Auto");
+            }}
+          >
+            Salvar
+          </BotaoDiv>
+        </BotaoBase>
       </div>
     </FormBase>
   );
