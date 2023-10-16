@@ -6,7 +6,6 @@ import {
 } from "../../Styled/StyledComponets";
 import { BotaoBase, BotaoDiv } from "../../Styled/StyledComponets";
 import { useNavigate } from "react-router-dom";
-
 import { useState } from "react";
 
 export const Forms = (props) => {

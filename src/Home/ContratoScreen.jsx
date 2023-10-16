@@ -6,7 +6,7 @@ export const ContratoScreen = (props) => {
   const tamanhoTexto = {
     fontSize: 12,
   };
-
+  //dados cliente
   const nome = props.nomeCliente;
   const rua = props.ruaCliente;
   const numeroCasa = props.numeroCasaCliente;
@@ -16,6 +16,17 @@ export const ContratoScreen = (props) => {
   const cep = props.cepCliente;
   const numeroCliente = props.numeroCliente;
   const telefone = props.telefone;
+
+  //dados veiculo
+  const marca = props.marca;
+  const modelo = props.modelo;
+  const anoFab = props.anoFab;
+  const anoMod = props.anoMod;
+  const chassi = props.chassi;
+  const cor = props.cor;
+  const placa = props.placa;
+  const categoria = props.categoria;
+  const renavam = props.renavam;
 
   const nomeDoCliente = {
     nome,
@@ -88,8 +99,9 @@ export const ContratoScreen = (props) => {
               " CEP " +
               cep +
               " inscrito no CPF  sob o nº " +
-              numeroCliente + ", e celular n°: " + telefone
-
+              numeroCliente +
+              ", e celular n°: " +
+              telefone,
           },
         ],
         alignment: "center",
@@ -115,24 +127,28 @@ export const ContratoScreen = (props) => {
         text: [
           { text: "Cláusula 1ª  ", bold: true },
           "O presente contrato tem como OBJETO, o veículo ",
-          { text: "Mercedes-Benz: ", bold: true },
-          "MARCA ",
-          { text: "Atego 1418 ", bold: true },
-          "ano de fabricação ",
-          { text: "2006 ", bold: true },
-          "modelo ",
-          { text: "2006 ", bold: true },
-          "chassi ",
-          { text: "9BM9580346B490411 ", bold: true },
-          " cor ",
-          { text: "BRANCA ", bold: true },
-          "placa ",
-          { text: "MQS-9B59 ", bold: true },
-          "categoria ",
-          { text: "PARTICULAR ", bold: true },
-          "com registro RENAVAM sob o nº ",
-          { text: "00890217920.\n\n", bold: true },
+          {
+            text:
+              marca +
+              " MODELO " +
+              modelo +
+              " ano de fabricação " +
+              anoFab +
+              " ano modelo " +
+              anoMod +
+              " chassi " +
+              chassi +
+              " cor " +
+              cor +
+              " placa " +
+              placa +
+              " categoria " +
+              categoria +
+              " com registro RENAVAM sob o nº " +
+              renavam,
+          },
         ],
+
         alignment: "center",
         style: tamanhoTexto,
         margin: [0, 0, 0, 15],

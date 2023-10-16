@@ -9,8 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export const FormAuto = (props) => {
-
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <FormBase>
@@ -19,29 +18,92 @@ export const FormAuto = (props) => {
       </TituloForm>
       <div>
         <form action="">
-          <label>Nome Completo:</label>
-          <input placeholder="Nome Completo" type="text" />
-          <label>Rua:</label>
-          <input placeholder="Rua:" type="text" />
-          <label>Numero:</label>
-          <input placeholder="Numero:" type="text" />
-          <label>Bairro:</label>
-          <input placeholder="Bairro:" type="text" />
-          <label>Cidade:</label>
-          <input placeholder="Cidade:" type="text" />
-          <label>Estado:</label>
-          <input placeholder="Estado:" type="text" />
-          <label>Cep</label>
-          <input placeholder="Cep:" type="text" />
-          <label>CPF ou CNPJ do cliente:</label>
-          <input placeholder="CPF/CNPJ" type="text" />
-          <label>Telefone</label>
-          <input placeholder="CPF/CNPJ" type="text" />
+          <label>Marca:</label>
+          <input
+            value={props.marca}
+            onChange={(txt) => {
+              props.setMarca([txt.target.value]);
+            }}
+            placeholder="Marca do veiculo"
+            type="text"
+          />
+          <label>Modelo</label>
+          <input
+            value={props.modelo}
+            onChange={(txt) => {
+              props.setModelo([txt.target.value]);
+            }}
+            placeholder="Modelo do veiculo"
+            type="text"
+          />
+          <label>Ano Fabricação:</label>
+          <input
+            value={props.anoFab}
+            onChange={(txt) => {
+              props.setAnoFab([txt.target.value]);
+            }}
+            placeholder="Ano fabricação"
+            type="text"
+          />
+          <label>Ano modelo</label>
+          <input
+            value={props.anoMod}
+            onChange={(txt) => {
+              props.setAnoMod([txt.target.value]);
+            }}
+            placeholder="Ano Modelo"
+            type="text"
+          />
+          <label>Chassi</label>
+          <input
+            value={props.chassi}
+            onChange={(txt) => {
+              props.setCahssi([txt.target.value]);
+            }}
+            placeholder="Chassi"
+            type="text"
+          />
+          <label>Cor</label>
+          <input
+            value={props.cor}
+            onChange={(txt) => {
+              props.setCor([txt.target.value]);
+            }}
+            placeholder="Cor do veiculo"
+            type="text"
+          />
+          <label>Placa</label>
+          <input
+            value={props.placa}
+            onChange={(txt) => {
+              props.setPlaca([txt.target.value]);
+            }}
+            placeholder="Placa do veiculo"
+            type="text"
+          />
+          <label>Categoria:</label>
+          <input
+            value={props.categoria}
+            onChange={(txt) => {
+              props.setCategoria([txt.target.value]);
+            }}
+            placeholder="Particular ou Aluguel"
+            type="text"
+          />
+          <label>Renavam:</label>
+          <input
+            value={props.renavam}
+            onChange={(txt) => {
+              props.setRenavam([txt.target.value]);
+            }}
+            placeholder="Registro Renavam"
+            type="text"
+          />
         </form>
         <BotaoBase>
           <BotaoDiv
             onClick={() => {
-              navigate("Contrato");
+              navigate("/Contrato");
             }}
           >
             Salvar
