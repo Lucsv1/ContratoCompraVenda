@@ -103,7 +103,7 @@ export const FormAuto = (props) => {
         <BotaoBase>
           <BotaoDiv
             onClick={() => {
-              navigate("/Contrato");
+              navigate("/Pay");
             }}
           >
             Salvar

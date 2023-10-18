@@ -28,6 +28,14 @@ export const ContratoScreen = (props) => {
   const categoria = props.categoria;
   const renavam = props.renavam;
 
+  //dados pagamento
+  const valorTotal = props.quantTotal;
+  const valorSinal = props.quantSinal;
+  const valorFinanciado = props.quantFinanciado;
+  const valorVista = props.quantVista;
+  const banco = props.banco;
+  const observacao = props.observacao;
+
   const nomeDoCliente = {
     nome,
   };
@@ -168,12 +176,14 @@ export const ContratoScreen = (props) => {
           { text: "VENDEDOR ", bold: true },
           "pela compra do veículo objeto deste contrato, a quantia de ",
           {
-            text: "R$158.000,00 (cento e cinquenta e oito mil reais) ",
-            bold: true,
-          },
-          "dando ",
-          { text: "R$1.000,00 (mil reais) ", bold: true },
-          "de sinal, e o restante na retirada do veículo.\n\n",
+            text:
+              valorTotal + " " +
+              valorSinal + " " +
+              banco + " " +
+              valorFinanciado + " " +
+              valorVista + " " +
+              observacao
+          }
         ],
         alignment: "center",
         style: tamanhoTexto,

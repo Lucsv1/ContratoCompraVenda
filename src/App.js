@@ -11,6 +11,7 @@ import { useState } from "react";
 import { ContratoScreen } from "./Home/ContratoScreen";
 import { Forms } from "./Home/components/Form/Forms";
 import { FormAuto } from "./Home/components/Form/FormAuto";
+import { FormPay } from "./Home/components/Form/FormPay";
 
 function App() {
   //REGISTRO CLIENTE
@@ -35,6 +36,13 @@ function App() {
   const [categoria, setCategoria] = useState("");
   const [renavam, setRenavam] = useState("");
 
+  //REGISTRO PAGAMENTO
+  const [quantTotal, setQuantTotal] = useState("");
+  const [quantSinal, setQuantSinal] = useState("");
+  const [quantFinanciado, setQuantFinanciado] = useState("");
+  const [quantVista, setQuantVista] = useState("");
+  const [observacao, setObeservacao] = useState("");
+  const [banco, setBanco] = useState("")
   return (
     <BrowserRouter>
       <GlobalStyled />
@@ -89,6 +97,13 @@ function App() {
               placa={placa}
               categoria={categoria}
               renavam={renavam}
+              //Pagamento
+              quantTotal={quantTotal}
+              quantSinal={quantSinal}
+              quantFinanciado={quantFinanciado}
+              quantVista={quantVista}
+              banco={banco}
+              observacao={observacao}
             />
           }
         />
@@ -114,6 +129,25 @@ function App() {
               setCategoria={setCategoria}
               renavam={renavam}
               setRenavam={setRenavam}
+            />
+          }
+        />
+        <Route
+          path="/Pay"
+          element={
+            <FormPay
+              quantTotal={quantTotal}
+              setQuantTotal={setQuantTotal}
+              quantSinal={quantSinal}
+              setQuantSinal={setQuantSinal}
+              quantFinanciado={quantFinanciado}
+              setQuantFinanciado={setQuantFinanciado}
+              quantVista={quantVista}
+              setQuantVista={setQuantVista}
+              observacao={observacao}
+              setObeservacao={setObeservacao}
+              banco={banco}
+              setBanco={setBanco}
             />
           }
         />
